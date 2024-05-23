@@ -1,6 +1,3 @@
-Claro! Vou aprimorar o design do README para que ele chame mais atenção, utilizando mais caracteres especiais e um layout mais criativo.
-
----
 
 # 📋 Step-by-Step Guide for Code Challenge Response
 
