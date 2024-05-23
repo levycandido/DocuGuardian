@@ -9,10 +9,4 @@ public class NodeArrayListDTO {
     private String item;
     private List<NodeArrayListDTO> children = new ArrayList<>();
     Boolean isParent = Boolean.FALSE;
-
-    public void addNode(NodeArrayListDTO node) {
-        if (node == null) return;
-        children.add(node);
-    }
-
 }

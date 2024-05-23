@@ -23,9 +23,8 @@ public class TraversalSearchLinkedList {
 
     }
 
-    public Set<String> process(NodeLinkedListDTO root) {
+    public void process(NodeLinkedListDTO root) {
         Set<String> products = new HashSet<>();
         recursiveCheck(root, products);
-        return products;
     }
 }

@@ -17,7 +17,7 @@ class TraversalSearchLinkedListTest {
     void loadAndProcessWithParentsNoChild() {
         System.out.println("loadAndProcessWithParentsNoChild");
         NodeLinkedListDTO root = getNodeLinkedList();
-        root.setChildren(loadRecods(1000));
+        root.setChildren(loadRecods());
         processData(root);
     }
 
@@ -25,24 +25,24 @@ class TraversalSearchLinkedListTest {
     void loadAndProcessWithParentsAndChild() {
         System.out.println("loadAndProcessWithParentsAndChild");
         NodeLinkedListDTO root = getNodeLinkedList();
-        root.setChildren(loadRecodsWithChild(1000));
+        root.setChildren(loadRecodsWithChild());
         processData(root);
     }
 
-    private List<NodeLinkedListDTO> loadRecods(int size) {
+    private List<NodeLinkedListDTO> loadRecods() {
         List<NodeLinkedListDTO> nodeLinkedLists = new LinkedList<>();
-        for (int i = 1; i < size; i++) {
+        for (int i = 1; i < 1000; i++) {
             NodeLinkedListDTO child = getNodeLinkedList();
             nodeLinkedLists.add(child);
         }
         return nodeLinkedLists;
     }
 
-    private List<NodeLinkedListDTO> loadRecodsWithChild(int size) {
+    private List<NodeLinkedListDTO> loadRecodsWithChild() {
         List<NodeLinkedListDTO> nodeLinkedLists = new LinkedList<>();
-        for (int i = 1; i < size; i++) {
+        for (int i = 1; i < 1000; i++) {
             NodeLinkedListDTO child = getNodeLinkedList();
-            child.setChildren(loadRecods(1000));
+            child.setChildren(loadRecods());
             child.getChildren()
                     .forEach(nodeArrayListDTO -> nodeArrayListDTO.setIsParent(Boolean.TRUE));
             nodeLinkedLists.add(child);

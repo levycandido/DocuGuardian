@@ -17,7 +17,7 @@ class TraversalSearchHashSetTest {
     void loadAndProcessWithParentsNoChild() {
         System.out.println("loadAndProcessWithParentsNoChild");
         NodeHashSetDTO root = getNodeHashTable();
-        root.setChildren(loadRecods(1000));
+        root.setChildren(loadRecods());
         processData(root);
     }
 
@@ -25,7 +25,7 @@ class TraversalSearchHashSetTest {
     void loadAndProcessWithParentsWithChild() {
         System.out.println("loadAndProcessWithParentsAndChild");
         NodeHashSetDTO root = getNodeHashTable();
-        root.setChildren(loadRecodsWithChild(1000));
+        root.setChildren(loadRecodsWithChild());
         processData(root);
     }
 
@@ -35,20 +35,20 @@ class TraversalSearchHashSetTest {
         Util.finishTheTime(startTime, StructureType.HASHTABLE);
     }
 
-    private Set<NodeHashSetDTO> loadRecods(int size) {
+    private Set<NodeHashSetDTO> loadRecods() {
         Set<NodeHashSetDTO> child = new HashSet<>();
-        for (int i = 1; i < size; i++) {
+        for (int i = 1; i < 1000; i++) {
             NodeHashSetDTO nodeHashTable = getNodeHashTable();
             child.add(nodeHashTable);
         }
         return child;
     }
 
-    private Set<NodeHashSetDTO> loadRecodsWithChild(int size) {
+    private Set<NodeHashSetDTO> loadRecodsWithChild() {
         Set<NodeHashSetDTO> child = new HashSet<>();
-        for (int i = 1; i < size; i++) {
+        for (int i = 1; i < 1000; i++) {
             NodeHashSetDTO nodeHashTable = getNodeHashTable();
-            nodeHashTable.setChildren(loadRecods(1000));
+            nodeHashTable.setChildren(loadRecods());
             nodeHashTable.getChildren()
                     .forEach(nodeArrayListDTO -> nodeArrayListDTO.setIsParent(Boolean.TRUE));
             child.add(nodeHashTable);
