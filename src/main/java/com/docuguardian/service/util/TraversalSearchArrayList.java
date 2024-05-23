@@ -8,10 +8,10 @@ import java.util.Set;
 public class TraversalSearchArrayList {
     public static void recursiveCheck(NodeArrayListDTO root, Set<String> products) {
         if (root == null) return;
-        /**
-         * Checking if the product already exists on the set.
-         * if products.add(x) return false means the set contain the product
-         * and no checking is necessary
+        /*
+          Checking if the product already exists on the set.
+          if products.add(x) return false means the set contain the product
+          and no checking is necessary
          */
         if (!products.add(root.getItem()) || root.getIsParent()) return;
 

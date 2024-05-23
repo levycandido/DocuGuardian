@@ -12,7 +12,6 @@ import java.util.Set;
 class TraversalSearchHashSetTest {
     TraversalSearchHashSet traversalSearchHashTable = new TraversalSearchHashSet();
     long startTime;
-    long endTime;
 
     @Test
     void loadAndProcessWithParentsNoChild() {

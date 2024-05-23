@@ -1,4 +1,4 @@
-package example;
+package performance;
 
 import com.docuguardian.service.dao.NodeArrayListDTO;
 import com.docuguardian.service.util.TraversalSearchArrayList;
@@ -13,7 +13,6 @@ class TraversalSearchArrayListTest {
 
     TraversalSearchArrayList traversalSearchArrayList = new TraversalSearchArrayList();
     long startTime;
-    long endTime;
 
     @Test
     void loadAndProcessWithParentsNoChild() {

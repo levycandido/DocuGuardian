@@ -7,7 +7,7 @@ public enum StructureType {
 
     public final String description;
 
-    private StructureType(String label) {
+    StructureType(String label) {
         this.description = label;
     }
 }

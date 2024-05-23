@@ -1,8 +1,5 @@
 package com.util;
 
-;
-
-
 import com.emun.StructureType;
 
 import java.nio.charset.StandardCharsets;

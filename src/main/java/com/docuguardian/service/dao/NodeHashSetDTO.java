@@ -11,40 +11,6 @@ public class NodeHashSetDTO {
     private Set<NodeHashSetDTO> children = new HashSet<>();
     Boolean isParent = Boolean.FALSE;
 
-    NodeHashSetDTO(String value) {
-        this.item = value;
-        this.children = new HashSet<>();
-    }
-
-    public NodeHashSetDTO() {
-
-    }
-
-    public void addNode(NodeHashSetDTO node) {
-        children.add(node);
-    }
-
-    public NodeHashSetDTO(String name, Set<NodeHashSetDTO> child) {
-        this.item = name;
-        this.children = child;
-    }
-
-    public String getItem() {
-        return item;
-    }
-
-    public void setItem(String item) {
-        this.item = item;
-    }
-
-    public Set<NodeHashSetDTO> getChildren() {
-        return children;
-    }
-
-    public void setChildren(Set<NodeHashSetDTO> children) {
-        this.children = children;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

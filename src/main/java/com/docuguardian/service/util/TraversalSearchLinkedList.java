@@ -8,10 +8,10 @@ import java.util.Set;
 public class TraversalSearchLinkedList {
     public static void recursiveCheck(NodeLinkedListDTO root, Set<String> products) {
         if (root == null) return;
-        /**
-         * Checking if the product already exists on the set.
-         * if products.add(x) return false means the set contain the product
-         * and no checking is necessary
+        /*
+          Checking if the product already exists on the set.
+          if products.add(x) return false means the set contain the product
+          and no checking is necessary
          */
         if (!products.add(root.getItem())) return;
 
@@ -23,7 +23,7 @@ public class TraversalSearchLinkedList {
 
     }
 
-    public Set<String> loadAndProcess( NodeLinkedListDTO root) {
+    public Set<String> process(NodeLinkedListDTO root) {
         Set<String> products = new HashSet<>();
         recursiveCheck(root, products);
         return products;

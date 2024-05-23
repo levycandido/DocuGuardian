@@ -12,7 +12,6 @@ import java.util.List;
 class TraversalSearchLinkedListTest {
     TraversalSearchLinkedList traversalSearchLinkedList = new TraversalSearchLinkedList();
     long startTime;
-    long endTime;
 
     @Test
     void loadAndProcessWithParentsNoChild() {
@@ -63,7 +62,7 @@ class TraversalSearchLinkedListTest {
 
     private void processData(NodeLinkedListDTO root) {
         initTheTime();
-        traversalSearchLinkedList.loadAndProcess(root);
+        traversalSearchLinkedList.process(root);
         Util.finishTheTime(startTime, StructureType.LINKEDLIST);
     }
 }

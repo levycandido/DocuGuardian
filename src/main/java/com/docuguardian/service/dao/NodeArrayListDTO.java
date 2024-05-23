@@ -10,15 +10,6 @@ public class NodeArrayListDTO {
     private List<NodeArrayListDTO> children = new ArrayList<>();
     Boolean isParent = Boolean.FALSE;
 
-    public NodeArrayListDTO() {
-
-    }
-
-    public NodeArrayListDTO(String name, List<NodeArrayListDTO> child) {
-        this.item = name;
-        this.children = child;
-    }
-
     public void addNode(NodeArrayListDTO node) {
         if (node == null) return;
         children.add(node);
