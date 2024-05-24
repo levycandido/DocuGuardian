@@ -115,10 +115,3 @@ Additionally, you can run the Spring Boot application and create a GET request t
 http://localhost:8080/v1/product/components
 ```
 
----
-
-Feel free to replace the placeholder text such as `[Recipient's Name]` and `[Your Name]` with the appropriate details.
-
----
-
-Espero que isso ajude a tornar o README mais atraente e fácil de seguir!
